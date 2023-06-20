@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://postgres:postgres@localhost:5432/demo
+    username: postgres
+    password: admin
+    pool:
+      enabled: true
+      initial-size: 1
+      max-size: 1
+
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc: DEBUG
